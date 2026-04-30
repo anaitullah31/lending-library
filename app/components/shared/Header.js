@@ -5,7 +5,7 @@ import { Person } from "@gravity-ui/icons";
 
 const Header = () => {
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-gray-800 bg-black text-white">
+    <nav className="sticky top-0 z-40 w-full">
       <div className="max-w-7xl mx-auto">
         <header className="flex min-h-16 items-center justify-between gap-4 px-4 md:px-6 py-3">
           {/* Logo */}

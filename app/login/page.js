@@ -1,10 +1,27 @@
+"use client";
 import Image from "next/image";
 import { FaGoogle, FaApple, FaXTwitter, FaFacebookF } from "react-icons/fa6";
 import { IoEyeOutline } from "react-icons/io5";
 import SocialButton from "../components/SocialButton";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { redirect } from "next/navigation";
 
 export default function LoginPage() {
+  const handleForm = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    // console.log(name, photo, email, password);
+    const { data, error } = await authClient.signIn.email({
+      email,
+      password,
+    });
+    console.log(data, error);
+    if (data) {
+      redirect("/");
+    }
+  };
   return (
     <main className="flex items-center justify-center p-8">
       <section className="w-full max-w-7xl  rounded-2xl bg-[#ffffff]  flex overflow-hidden">
@@ -67,13 +84,14 @@ export default function LoginPage() {
               <div className="h-px flex-1 bg-gray-300" />
             </div>
 
-            <form className="space-y-6">
+            <form onSubmit={handleForm} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
                   Email
                 </label>
                 <input
                   type="email"
+                  name="email"
                   className="w-full border-b-2 border-black outline-none py-1 text-sm"
                 />
               </div>
@@ -85,6 +103,7 @@ export default function LoginPage() {
                 <div className="relative">
                   <input
                     type="password"
+                    name="password"
                     className="w-full border-b-2 border-black outline-none py-1 pr-8 text-sm"
                   />
                   <IoEyeOutline className="absolute right-0 top-1/2 -translate-y-1/2 text-xl" />

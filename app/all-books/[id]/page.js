@@ -1,5 +1,5 @@
 import BookDetailsCard from "@/app/components/BookDetailsCard";
-import { loadAllBooks } from "@/app/lib/utils";
+import { loadAllBooks } from "@/lib/utils";
 
 const BookDetailsPage = async ({ params }) => {
   const { id } = await params;

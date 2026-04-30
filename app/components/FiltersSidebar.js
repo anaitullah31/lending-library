@@ -1,4 +1,4 @@
-import { loadAllBooks } from "../lib/utils";
+import { loadAllBooks } from "../../lib/utils";
 
 export default async function FiltersSidebar() {
   const books = await loadAllBooks();

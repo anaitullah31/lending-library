@@ -1,6 +1,6 @@
-import BookCard from "./BookCard";
-import { loadAllBooks } from "../lib/utils";
 import { Input } from "@heroui/react";
+import { loadAllBooks } from "../../lib/utils";
+import BookCard from "./BookCard";
 
 export default async function BookGrid() {
   const books = await loadAllBooks();

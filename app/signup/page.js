@@ -4,7 +4,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import SocialButton from "../components/SocialButton";
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <main className="flex items-center justify-center p-8">
       <section className="w-full max-w-7xl  rounded-2xl bg-[#ffffff]  flex overflow-hidden">
@@ -21,7 +21,7 @@ export default function LoginPage() {
 
         {/* Right card */}
         <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
-          <div className="w-full max-w-md min-h-170 bg-white rounded-2xl shadow-md px-10 py-20">
+          <div className="w-full max-w-md min-h-170 bg-white rounded-2xl shadow-md p-10">
             {/* Logo */}
             <div className="mb-6">
               <div className="h-10 w-10 rounded-full bg-black relative overflow-hidden">
@@ -30,15 +30,15 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <h1 className="text-4xl font-bold text-black mb-3">Sign in</h1>
+            <h1 className="text-4xl font-bold text-black mb-3">Sign up</h1>
 
             <p className="text-sm text-gray-500 mb-6">
-              Don’t have an account?{" "}
+              Already have an account?{" "}
               <Link
-                href="/signup"
+                href="/login"
                 className="font-semibold text-black cursor-pointer"
               >
-                Sign up
+                Sign in
               </Link>
             </p>
 
@@ -62,12 +62,30 @@ export default function LoginPage() {
             <div className="flex items-center gap-3 mb-7">
               <div className="h-px flex-1 bg-gray-300" />
               <span className="text-sm text-gray-500">
-                or sign in with email
+                or sign up with email
               </span>
               <div className="h-px flex-1 bg-gray-300" />
             </div>
 
             <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-black mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full border-b-2 border-black outline-none py-1 text-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-black mb-2">
+                  Image URL
+                </label>
+                <input
+                  type="text"
+                  className="w-full border-b-2 border-black outline-none py-1 text-sm"
+                />
+              </div>
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
                   Email

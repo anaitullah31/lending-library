@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Forest",
+    "author": "Emma Clarke",
+    "description": "The Silent Forest is a deeply immersive novel that explores the mysterious relationship between humanity and nature. Set in a secluded village surrounded by an ancient forest, the story follows Elara, a young woman who questions the traditions that have kept her people away from the woods for generations. The forest is said to be cursed, a place where no one returns once they enter. Despite the warnings, Elara feels an unexplainable connection to it, as if it is calling her. As she ventures into the forest, she discovers that it is far from empty. Strange creatures roam beneath the towering trees, and remnants of a forgotten civilization lie hidden beneath layers of moss and time. The deeper she goes, the more she realizes that the forest is alive—watching, waiting, and reacting to her presence. She begins to uncover secrets about the past, including a powerful force that once disrupted the balance between nature and humanity. Throughout her journey, Elara faces challenges that test her courage and beliefs. She must confront her fears, question the truth she has always known, and ultimately decide whether to restore the balance or protect her village from the unknown. The narrative is rich with vivid descriptions, emotional depth, and philosophical reflections on human curiosity and responsibility. The Silent Forest is not just a story about adventure—it is a reflection on how fear shapes societies and how curiosity drives change. It challenges readers to think about the consequences of ignoring history and the importance of understanding the natural world. By the end, readers are left with a lingering sense of wonder and a deeper appreciation for the mysteries that lie beyond what we can see.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://ibb.co/S4JFZW1V"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript Mastery",
+    "author": "Daniel Brooks",
+    "description": "JavaScript Mastery is a comprehensive guide that takes readers on a journey from beginner to advanced JavaScript developer. The book starts by introducing the core fundamentals of the language, including variables, data types, functions, and control flow. Each concept is explained with clarity, making it easy for newcomers to understand the building blocks of programming. As the book progresses, it dives deeper into advanced topics such as closures, prototypes, and asynchronous programming. These concepts are often considered challenging, but the author simplifies them with real-world examples and practical exercises. Readers will gain a solid understanding of how JavaScript works behind the scenes, including how the event loop and call stack operate. A major focus of the book is modern JavaScript, including ES6+ features like arrow functions, destructuring, modules, and async/await. These tools are essential for writing clean and efficient code in today’s development environment. The book also emphasizes best practices, helping developers avoid common mistakes and write maintainable code. In addition to theory, JavaScript Mastery includes hands-on projects that allow readers to apply what they have learned. These projects simulate real-world scenarios, making the learning experience both practical and engaging. By the end of the book, readers will have built several applications and gained the confidence to tackle their own projects. This book is ideal for anyone looking to improve their JavaScript skills, whether they are beginners or experienced developers. It provides a complete roadmap for mastering the language and becoming a proficient web developer.",
+    "category": "Tech",
+    "available_quantity": 12,
+    "image_url": "https://ibb.co/jvmZTDxk"
+  },
+  {
+    "id": 3,
+    "title": "Cosmic Wonders",
+    "author": "Dr. Sarah Lin",
+    "description": "Cosmic Wonders takes readers on an extraordinary journey through the vast and mysterious universe. Written by renowned astrophysicist Dr. Sarah Lin, the book explores the origins of the cosmos, the formation of galaxies, and the incredible phenomena that shape our universe. From black holes to neutron stars, each topic is explained in a way that is both scientifically accurate and accessible to general readers. The book begins with the Big Bang, providing a clear and engaging explanation of how the universe came into existence. It then moves on to explore the evolution of stars and galaxies, highlighting the forces that govern their behavior. Readers will learn about gravity, dark matter, and the role of energy in shaping the cosmos. One of the most fascinating sections of the book focuses on black holes, describing their formation, structure, and the impact they have on their surroundings. The author uses vivid analogies to help readers understand complex concepts, making the subject matter both intriguing and approachable. In addition to scientific explanations, Cosmic Wonders also reflects on the philosophical implications of studying the universe. It encourages readers to think about humanity’s place in the cosmos and the significance of our existence in such a vast expanse. By the end of the book, readers will have gained a deeper understanding of the universe and a greater appreciation for the beauty and complexity of the cosmos. Cosmic Wonders is both educational and inspiring, making it a must-read for anyone interested in science and astronomy.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://ibb.co/rRqPxY03"
+  },
+
+  {
+    "id": 4,
+    "title": "The Lost Kingdom",
+    "author": "James Holloway",
+    "description": "The Lost Kingdom is an epic adventure story that follows a young hero’s journey to uncover a forgotten civilization hidden beyond the known world. The story begins in a small village where legends of a lost kingdom have been passed down for generations. Most people dismiss these tales as myths, but the protagonist, Arin, believes there is truth behind them. Driven by curiosity and a desire for discovery, Arin sets out on a dangerous journey across treacherous landscapes. Along the way, he encounters allies who share his vision, as well as enemies who seek to stop him. The journey tests his strength, intelligence, and determination. As Arin gets closer to the truth, he uncovers ancient artifacts and clues that reveal the history of the lost kingdom. He learns about its rise and fall, and the powerful forces that led to its disappearance. The deeper he goes, the more he realizes that the kingdom’s legacy is still alive and that its secrets could change the world. The novel is filled with action, suspense, and emotional moments that keep readers engaged from start to finish. It explores themes of courage, friendship, and the pursuit of knowledge. The Lost Kingdom is a captivating story that combines adventure with meaningful storytelling, making it a memorable read for fans of epic tales.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://ibb.co/qFnksyWt"
+  },
+
+  {
+    "id": 5,
+    "title": "React in Action",
+    "author": "Sophia Turner",
+    "description": "React in Action is a practical guide to building modern web applications using React. The book starts by introducing the fundamentals of React, including components, props, and state. These concepts form the foundation of any React application, and the author explains them in a clear and approachable way. As readers progress, they learn about advanced topics such as hooks, context, and performance optimization. The book emphasizes best practices, helping developers write clean and efficient code. One of the key features of the book is its focus on real-world applications. Readers will build several projects, gaining hands-on experience with React. These projects cover a range of use cases, from simple interfaces to complex applications. The book also explores how React integrates with other tools and libraries, providing a complete development experience. By the end, readers will have the skills needed to build professional web applications. React in Action is an essential resource for anyone looking to learn or improve their React skills.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://ibb.co/V0W9rJzX"
+  },
+
+  {
+    "id": 6,
+    "title": "Quantum Realities",
+    "author": "Dr. Alan Reed",
+    "description": "Quantum Realities explores the fascinating world of quantum mechanics and its implications for our understanding of reality. The book introduces readers to the fundamental principles of quantum physics, including wave-particle duality, uncertainty, and superposition. Through clear explanations and engaging examples, the author makes complex concepts accessible to a wide audience. Readers will learn how quantum mechanics challenges traditional ideas about the nature of reality. The book also discusses the practical applications of quantum physics, including quantum computing and advanced technologies. It highlights how these developments could transform the future. Quantum Realities is both educational and thought-provoking, encouraging readers to think deeply about the nature of existence. By the end, readers will have a better understanding of one of the most important fields in modern science.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://ibb.co/WWrk5gGx"
+  },
+  {
+    "id": 7,
+    "title": "Whispers of the Night",
+    "author": "Lily Dawson",
+    "description": "Whispers of the Night is a captivating story that blends mystery, emotion, and suspense into a hauntingly beautiful narrative. Set in a quiet town where nothing ever seems to change, the story follows Aria, a young woman who begins to experience strange occurrences after the sudden disappearance of her childhood friend. At first, the events seem like coincidences—faint sounds in the night, shadows moving where there should be none—but as time passes, the signs become impossible to ignore. Aria begins to uncover clues that suggest her friend’s disappearance is connected to something far more sinister. As she digs deeper, she realizes that the town holds secrets buried beneath its calm surface. Long-forgotten events, hidden relationships, and unexplained phenomena start to come to light. The deeper she goes, the more she becomes entangled in a web of mystery that threatens to consume her. The novel explores themes of memory, loss, and the unseen forces that shape our lives. It delves into the emotional struggles of the characters, highlighting their fears, regrets, and hopes. The atmosphere is rich and immersive, with vivid descriptions that bring the setting to life. Whispers of the Night keeps readers on edge, constantly questioning what is real and what is imagined. It is a story that lingers long after the final page, leaving readers with a sense of wonder and unease.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://ibb.co/Z6btn9nk"
+  },
+  {
+    "id": 8,
+    "title": "Node.js Essentials",
+    "author": "Michael Grant",
+    "description": "Node.js Essentials is a practical guide designed to help developers understand and build scalable backend applications using Node.js. The book begins by introducing the fundamentals of server-side JavaScript, explaining how Node.js differs from traditional backend technologies. Readers will learn about the event-driven, non-blocking architecture that makes Node.js so powerful. As the book progresses, it covers core concepts such as modules, file systems, and asynchronous programming. The author provides clear explanations and practical examples, making it easy for readers to grasp even complex topics. One of the key strengths of the book is its focus on real-world applications. Readers will build multiple projects, including REST APIs and full backend systems. These projects demonstrate how to structure applications, manage data, and handle user requests efficiently. The book also introduces popular tools and frameworks like Express.js, providing a complete development experience. In addition to coding, Node.js Essentials emphasizes best practices for performance, security, and scalability. Readers will learn how to optimize their applications and prepare them for production environments. By the end of the book, readers will have a solid understanding of Node.js and the confidence to build their own backend systems.",
+    "category": "Tech",
+    "available_quantity": 9,
+    "image_url": "https://ibb.co/CFJyKCq"
+  },
+  {
+    "id": 9,
+    "title": "The Human Brain",
+    "author": "Dr. Nina Patel",
+    "description": "The Human Brain is an insightful exploration of one of the most complex and fascinating organs in the human body. Written by neuroscientist Dr. Nina Patel, the book takes readers on a journey through the structure, function, and capabilities of the brain. It begins with an overview of basic anatomy, explaining how different regions of the brain work together to control thoughts, emotions, and actions. The book then delves into more advanced topics, including memory, learning, and decision-making. Readers will discover how the brain processes information and adapts to new experiences. The author uses real-life examples and case studies to illustrate how the brain responds to different situations. One of the most compelling aspects of the book is its focus on neuroplasticity—the brain’s ability to change and adapt over time. This concept challenges traditional ideas about intelligence and learning, showing that the brain is far more flexible than previously believed. The Human Brain also explores the impact of technology and modern life on cognitive function. It raises important questions about how our habits and environment shape the way we think. By the end of the book, readers will have a deeper understanding of how the brain works and how they can use that knowledge to improve their lives.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://ibb.co/MbwbMXB"
+  },
+  {
+    "id": 10,
+    "title": "Echoes of the Past",
+    "author": "Robert King",
+    "description": "Echoes of the Past is a powerful historical fiction novel that brings forgotten stories back to life. The narrative follows a historian who uncovers a series of documents that reveal hidden truths about an ancient civilization. As he pieces together the fragments of history, he begins to understand the events that shaped the present. The story moves between past and present, creating a rich and layered narrative. Readers are transported to different time periods, experiencing the struggles and triumphs of those who lived before. The author’s attention to detail makes the historical setting feel authentic and immersive. Throughout the novel, themes of legacy, identity, and the passage of time are explored. The characters are complex and well-developed, each with their own motivations and challenges. Echoes of the Past is not just a story about history—it is a reflection on how the past continues to influence the present. It encourages readers to think about the importance of preserving knowledge and understanding where we come from. This novel is both engaging and thought-provoking, making it a compelling read for fans of historical fiction.",
+    "category": "Story",
+    "available_quantity": 11,
+    "image_url": "https://ibb.co/bgyRgYnz"
+  },
+  {
+    "id": 11,
+    "title": "Fullstack Development",
+    "author": "Olivia Martinez",
+    "description": "Fullstack Development is a comprehensive guide that teaches developers how to build complete web applications from frontend to backend. The book begins with an introduction to core web technologies, including HTML, CSS, and JavaScript. These fundamentals provide the foundation for everything that follows. As readers progress, they learn how to build dynamic user interfaces using modern frameworks. The book also covers backend development, including server setup, database management, and API creation. By combining these skills, readers gain a full understanding of how web applications work. One of the key strengths of the book is its focus on integration. It shows how different technologies work together to create seamless user experiences. Readers will build multiple projects, applying their knowledge in practical scenarios. The book also emphasizes best practices for code organization, performance, and scalability. These skills are essential for professional development. By the end of the book, readers will have the confidence and knowledge to build fullstack applications and pursue a career in web development.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://ibb.co/whLXhHPH"
+  },
+  {
+    "id": 12,
+    "title": "Future of AI",
+    "author": "Dr. Kevin Zhou",
+    "description": "Future of AI explores the rapidly evolving field of artificial intelligence and its impact on society. Written by AI researcher Dr. Kevin Zhou, the book provides a comprehensive overview of current technologies and future possibilities. It begins by explaining the basics of AI, including machine learning and neural networks. The book then explores real-world applications, from healthcare and education to business and entertainment. Readers will see how AI is already transforming industries and improving lives. One of the most important aspects of the book is its discussion of ethical considerations. It raises questions about privacy, bias, and the role of AI in decision-making. The author encourages readers to think critically about the implications of these technologies. Future of AI also looks ahead, exploring potential advancements and challenges. It provides a balanced perspective, highlighting both the opportunities and risks associated with AI. By the end of the book, readers will have a deeper understanding of artificial intelligence and its role in shaping the future. It is an informative and thought-provoking read for anyone interested in technology and innovation.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://ibb.co/SDLC89BF"
+  }
+]

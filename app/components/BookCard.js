@@ -2,19 +2,16 @@ import Image from "next/image";
 import { Bookmark } from "lucide-react";
 
 export default function BookCard({ book }) {
-    const {image_url} = book;
-    console.log(image_url);
-    
   return (
-    <div className="w-71.25 rounded-lg border border-[#000000] bg-white p-3 shadow-sm">
-      <div className="relative overflow-hidden rounded-md">
+    <div className="rounded-lg border border-[#000000] bg-white p-3 shadow-sm flex flex-col">
+      <div className="relative overflow-hidden rounded-md flex-1">
         <Image
           src={book?.image_url}
           alt={book?.title || "Book image"}
           width={270}
           height={340}
           unoptimized
-          className=" w-full object-cover"
+          className="h-full rounded-md object-cover"
         />
 
         <button className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md">
@@ -27,10 +24,10 @@ export default function BookCard({ book }) {
           {book.title}
         </h3>
 
-        <p className="mt-1 text-[16px] text-[#6f4b43]">{book.author}</p>
+        <p className="mt-1 text-[16px] text-[#000000]">{book.author}</p>
       </div>
 
-      <button className="mt-6 w-full rounded-lg border border-[#9b781d] py-3 text-[16px] font-medium text-[#9b6b00] transition hover:bg-[#9b781d] hover:text-white">
+      <button className="mt-6 w-full rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white">
         View Details
       </button>
     </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Bookmark } from "lucide-react";
+import Link from "next/link";
 
 export default function BookCard({ book }) {
   return (
@@ -27,9 +28,12 @@ export default function BookCard({ book }) {
         <p className="mt-1 text-[16px] text-[#000000]">{book.author}</p>
       </div>
 
-      <button className="mt-6 w-full rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white">
+      <Link
+        href={`/all-books/${book.id}`}
+        className="mt-6 w-full rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white"
+      >
         View Details
-      </button>
+      </Link>
     </div>
   );
 }

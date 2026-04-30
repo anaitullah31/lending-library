@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BookCard from "./BookCard";
-import { loadAllBooks } from "./lib/utils";
+import { loadAllBooks } from "../lib/utils";
 
 const FeaturedBooks = async () => {
   const laodedBooks = await loadAllBooks();

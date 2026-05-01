@@ -1,6 +1,7 @@
 "use client";
-import { FaGoogle} from "react-icons/fa6";
+import { FaGoogle } from "react-icons/fa6";
 import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
 
 const SocialLoginButton = () => {
   const handleGoogleSignIn = async () => {
@@ -8,7 +9,11 @@ const SocialLoginButton = () => {
       provider: "google",
       callbackURL: "/",
     });
-    console.log(data, "Google signin");
+    if (!data) {
+      toast.error(`Please try again! ${error.message}`, {
+        position: "top-center",
+      });
+    }
   };
   return (
     <div className="mb-8">

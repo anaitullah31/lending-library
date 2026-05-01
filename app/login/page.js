@@ -7,6 +7,7 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import SocialLoginButton from "../components/SocialLoginButton";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
   const handleForm = async (e) => {
@@ -19,6 +20,11 @@ export default function LoginPage() {
       password,
     });
     console.log(data, error);
+    if (!data) {
+      toast.error(` Please try again! ${error.message}`, {
+        position: "top-center",
+      });
+    }
     if (data) {
       redirect("/");
     }
@@ -111,9 +117,9 @@ export default function LoginPage() {
 
               <button
                 type="submit"
-                className="w-full bg-black text-white rounded-xl py-4 font-medium shadow-md hover:bg-gray-900 transition"
+                className="w-full cursor-pointer bg-black text-white rounded-xl py-4 font-medium shadow-md hover:bg-gray-900 transition"
               >
-                Sign in
+                Sign In
               </button>
             </form>
           </div>

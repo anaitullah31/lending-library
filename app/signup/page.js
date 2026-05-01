@@ -7,6 +7,7 @@ import { authClient } from "../../lib/auth-client";
 import SocialButton from "../components/SocialButton";
 import { redirect } from "next/navigation";
 import SocialLoginButton from "../components/SocialLoginButton";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
   const handleForm = async (e) => {
@@ -24,6 +25,11 @@ export default function RegisterPage() {
       // callbackURL: "/login",
     });
     console.log(data, error);
+    if (!data) {
+      toast.error(` Please try again! ${error.message}`, {
+        position: "top-center",
+      });
+    }
     if (data) {
       redirect("/login");
     }
@@ -137,9 +143,9 @@ export default function RegisterPage() {
 
               <button
                 type="submit"
-                className="w-full bg-black text-white rounded-xl py-4 font-medium shadow-md hover:bg-gray-900 transition"
+                className="w-full cursor-pointer bg-black text-white rounded-xl py-4 font-medium shadow-md hover:bg-gray-900 transition"
               >
-                Sign in
+                Sign Up
               </button>
             </form>
           </div>

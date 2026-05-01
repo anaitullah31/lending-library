@@ -11,8 +11,8 @@ export default async function BookGrid() {
         <div>
           <Input
             aria-label="Name"
-            className="w-64 p-1 border rounded-md focus:border-0"
-            placeholder="Enter your name"
+            className="w-64 py-1 px-3 border rounded-md focus:border-0"
+            placeholder="Enter book title"
           />
         </div>
         <select className="border px-3 py-2 rounded-md">

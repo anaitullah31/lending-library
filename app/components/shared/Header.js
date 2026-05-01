@@ -33,9 +33,9 @@ const Header = () => {
           <li>
             <Link href="/all-books">All Books</Link>
           </li>
-          <li>
+          {session && <li>
             <Link href="/profile">My Profile</Link>
-          </li>
+          </li>}
         </ul>
 
         {/* Right: Auth */}

@@ -1,9 +1,23 @@
+"use client";
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { toast } from "react-toastify";
 
 const BookDetailsCard = ({ book }) => {
+  const {data} = authClient.useSession();
+  
   if (!book) {
     return <p className="text-center py-20">Book not found</p>;
   }
+  const handleBorrowBook = (title) => {
+    if(!data){
+      return redirect("/login")
+    }
+    toast.success(`${title} book has been added to your borrowed list `, {
+      position: "top-center",
+    });
+  };
 
   return (
     <main className="max-w-7xl mx-auto px-6 py-10">
@@ -19,7 +33,10 @@ const BookDetailsCard = ({ book }) => {
           />
 
           <div className="mt-6 flex flex-col gap-4">
-            <button className="w-full bg-[#030303] text-white py-4 rounded-md font-medium hover:bg-[#0B0A2A] transition">
+            <button
+              onClick={() => handleBorrowBook(book.title)}
+              className="w-full cursor-pointer bg-[#030303] text-white py-4 rounded-md font-medium hover:bg-[#0B0A2A] transition"
+            >
               Borrow Digital Edition
             </button>
 

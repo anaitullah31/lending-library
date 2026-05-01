@@ -30,7 +30,7 @@ export default function BookCard({ book }) {
 
       <Link
         href={`/all-books/${book.id}`}
-        className="mt-6 w-full rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white"
+        className="mt-6 w-full px-4 rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white"
       >
         View Details
       </Link>

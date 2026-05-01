@@ -9,11 +9,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Image src="/logo-books.png" alt="Logo" width={50} height={50} />
-              <span className="text-lime-400 uppercase">Lending Library</span>
+              <span className="text-white-400 uppercase">Lending Library</span>
             </div>
 
             <h3 className="text-sm font-medium mb-1">Contact Us</h3>
-            <div className="w-8 h-0.5 bg-lime-400 mb-5"></div>
+            <div className="w-8 h-0.5 bg-white mb-5"></div>
 
             <p className="text-sm text-gray-300">lending-library@email.com</p>
             <p className="text-sm text-gray-300">+60 234 567 888</p>
@@ -26,7 +26,7 @@ const Footer = () => {
                   <a
                     key={item}
                     href="#"
-                    className="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center text-sm hover:bg-lime-400 hover:text-black transition"
+                    className="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center text-sm "
                   >
                     {item}
                   </a>
@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Services */}
           <div className="md:pl-20">
             <h3 className="text-sm font-medium mb-1">Services</h3>
-            <div className="w-8 h-0.5 bg-lime-400 mb-5"></div>
+            <div className="w-8 h-0.5 bg-white mb-5"></div>
 
             <ul className="space-y-3 text-sm text-gray-300">
               <li>• Browse Book Collection</li>
@@ -53,7 +53,7 @@ const Footer = () => {
           {/* Location */}
           <div>
             <h3 className="text-sm font-medium mb-1">Location</h3>
-            <div className="w-8 h-0.5 bg-lime-400 mb-5"></div>
+            <div className="w-8 h-0.5 bg-white mb-5"></div>
 
             <div className="space-y-6 text-sm text-gray-300">
               <div>

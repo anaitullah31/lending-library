@@ -1,39 +1,39 @@
 import Image from "next/image";
-import { Bookmark } from "lucide-react";
 import Link from "next/link";
 
 export default function BookCard({ book }) {
   return (
-    <div className="rounded-lg border border-[#000000] bg-white p-3 shadow-sm flex flex-col">
-      <div className="relative overflow-hidden rounded-md flex-1">
-        <Image
-          src={book?.image_url}
-          alt={book?.title || "Book image"}
-          width={270}
-          height={340}
-          unoptimized
-          className="h-full rounded-md object-cover"
-        />
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition">
+      <Image
+        src={book.image_url}
+        alt={book.title}
+        width={400}
+        height={500}
+        className="w-full h-72 object-cover"
+      />
 
-        <button className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md">
-          <Bookmark size={20} className="text-gray-700" />
-        </button>
-      </div>
+      <div className="p-5">
+        <p className="text-xs uppercase text-gray-500 mb-2">
+          {book.category}
+        </p>
 
-      <div className="mt-3">
-        <h3 className="font-serif text-[17px] font-semibold text-[#06113c]">
+        <h3 className="text-xl font-bold text-black line-clamp-1">
           {book.title}
         </h3>
 
-        <p className="mt-1 text-[16px] text-[#000000]">{book.author}</p>
-      </div>
+        <p className="text-gray-500 mt-1">{book.author}</p>
 
-      <Link
-        href={`/all-books/${book.id}`}
-        className="mt-6 w-full px-4 rounded-lg border border-[#000000] py-3 text-[16px] font-medium text-[#000000] transition hover:bg-[#000000] hover:text-white"
-      >
-        View Details
-      </Link>
+        <p className="text-sm text-gray-600 mt-3">
+          {book.available_quantity} copies available
+        </p>
+
+        <Link
+          href={`/all-books/${book.id}`}
+          className="inline-block mt-5 w-full text-center bg-black text-white py-3 rounded-lg hover:bg-gray-900 transition"
+        >
+          View Details
+        </Link>
+      </div>
     </div>
   );
 }

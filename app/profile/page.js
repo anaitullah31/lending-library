@@ -5,11 +5,15 @@ import Image from "next/image";
 import { Pencil } from "lucide-react";
 import EditButton from "../components/EditButton";
 import Info from "../components/Info";
+import { redirect } from "next/navigation";
 
 const ProfilePage = () => {
   const { data, isPending } = authClient.useSession();
 
   if (isPending) return <p className="text-center py-20">Loading...</p>;
+  if(!data){
+    return redirect("/login")
+  }
 
   const user = data?.user;
 

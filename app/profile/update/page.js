@@ -2,10 +2,13 @@
 
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
-import { IoEyeOutline } from "react-icons/io5";
 import { toast } from "react-toastify";
 
 function UpdateProfile() {
+  const { data, isPending } = authClient.useSession();
+  if (!data) {
+    return redirect("/login");
+  }
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;

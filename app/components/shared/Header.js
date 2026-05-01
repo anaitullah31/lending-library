@@ -3,9 +3,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { Avatar } from "@heroui/react";
 import { Person } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
 
 const Header = () => {
-  const user = false;
+  const {
+    data: session,
+    isPending, //loading state
+    error, //error object
+    refetch,
+  } = authClient.useSession();
+  const user = session?.user;
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  };
   return (
     <nav className="py-4 border-b border-gray-800">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -31,9 +42,9 @@ const Header = () => {
         <div className="flex items-center gap-4 text-sm">
           {user ? (
             <>
-              <span className="text-green-400">{user.name}</span>
+              <span className="text-black">{user.name}</span>
               <button
-                onClick={() => setUser(null)}
+                onClick={handleSignOut}
                 className="border border-black-400 px-3 py-1 rounded hover:bg-black-400"
               >
                 Logout

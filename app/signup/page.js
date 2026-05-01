@@ -6,6 +6,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { authClient } from "../../lib/auth-client";
 import SocialButton from "../components/SocialButton";
 import { redirect } from "next/navigation";
+import SocialLoginButton from "../components/SocialLoginButton";
 
 export default function RegisterPage() {
   const handleForm = async (e) => {
@@ -66,20 +67,7 @@ export default function RegisterPage() {
             </p>
 
             {/* Social buttons */}
-            <div className="grid grid-cols-4 gap-4 mb-8">
-              <SocialButton>
-                <FaGoogle className="text-lg" />
-              </SocialButton>
-              <SocialButton>
-                <FaApple className="text-xl text-black" />
-              </SocialButton>
-              <SocialButton>
-                <FaXTwitter className="text-lg text-black" />
-              </SocialButton>
-              <SocialButton>
-                <FaFacebookF className="text-lg text-blue-600" />
-              </SocialButton>
-            </div>
+            <SocialLoginButton />
 
             {/* Divider */}
             <div className="flex items-center gap-3 mb-7">

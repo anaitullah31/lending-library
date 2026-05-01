@@ -1,7 +1,5 @@
 "use client";
-import React from "react";
-import SocialButton from "./SocialButton";
-import { FaApple, FaFacebookF, FaGoogle, FaXTwitter } from "react-icons/fa6";
+import { FaGoogle} from "react-icons/fa6";
 import { authClient } from "@/lib/auth-client";
 
 const SocialLoginButton = () => {
@@ -10,6 +8,7 @@ const SocialLoginButton = () => {
       provider: "google",
       callbackURL: "/",
     });
+    console.log(data, "Google signin");
   };
   return (
     <div className="mb-8">
@@ -19,15 +18,6 @@ const SocialLoginButton = () => {
       >
         <FaGoogle className="text-lg" />
       </button>
-      {/* <SocialButton>
-        <FaApple className="text-xl text-black" />
-      </SocialButton>
-      <SocialButton>
-        <FaXTwitter className="text-lg text-black" />
-      </SocialButton>
-      <SocialButton>
-        <FaFacebookF className="text-lg text-blue-600" />
-      </SocialButton> */}
     </div>
   );
 };

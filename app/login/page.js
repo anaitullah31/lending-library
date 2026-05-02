@@ -28,8 +28,10 @@ export default function LoginPage() {
       });
       return;
     }
-
-    router.push("/");
+    if (data) {
+      router.refresh();
+      router.push("/");
+    }
   };
 
   return (

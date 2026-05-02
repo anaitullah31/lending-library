@@ -3,8 +3,8 @@ import { loadAllBooks } from "../../lib/utils";
 import BookCard from "./BookCard";
 
 const FeaturedBooks = async () => {
-  const books = await loadAllBooks();
-  // const books = loadedBooks.slice(0, 4);
+  const loadedBooks = await loadAllBooks();
+  const books = loadedBooks.slice(0, 4);
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">

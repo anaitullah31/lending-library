@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Lending Library – Online Book Borrowing Platform
 
-## Getting Started
+🔗 **Live Site:** https://lending-library-eight.vercel.app/  
+🔗 **GitHub Repo:** https://github.com/anaitullah31/lending-library  
 
-First, run the development server:
+---
+
+## 🚀 Project Overview
+
+**Lending Library** is a modern online book borrowing platform designed to digitize the traditional library experience. Users can explore books, filter by categories, and borrow them digitally with a secure and seamless interface.
+
+The application is built with performance, responsiveness, and user experience in mind using **Next.js, Tailwind CSS, BetterAuth, and MongoDB (or local data)**.
+
+---
+
+## 🎯 Key Features
+
+### 🏠 Home Page
+- Hero banner: *"Find Your Next Read"*
+- Marquee showing new arrivals and offers
+- Featured Books section (Top 4 books)
+- Additional custom sections for enhanced UI
+
+---
+
+### 🔐 Authentication
+- Email & Password Login/Register
+- Google Social Login
+- Error handling with toast notifications
+- Secure authentication using **BetterAuth**
+
+---
+
+### 📚 All Books Page
+- Responsive grid layout
+- Search books by title
+- Filter books by category (Story, Tech, Science)
+- Book cards with details button
+
+---
+
+### 📖 Book Details Page (Private Route)
+- Accessible only for logged-in users
+- Displays:
+  - Book cover
+  - Title, author, description
+  - Available quantity
+- Borrow button:
+  - Redirects to login if not authenticated
+  - Shows confirmation toast
+
+---
+
+### 👤 My Profile (Private Route)
+- Displays user information
+- Update profile feature:
+  - Change name and profile image
+  - Uses BetterAuth update user API
+
+---
+
+### 🎨 UI & UX
+- Fully responsive (Mobile, Tablet, Desktop)
+- Clean and modern UI design
+- Custom Navbar & Footer
+- Smooth interactions with **Swiper.js**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js (App Router)
+- **Styling:** Tailwind CSS + HeroUI
+- **Authentication:** BetterAuth
+- **UI Components:** HeroUI
+- **Carousel:** Swiper.js
+- **Icons:** React Icons / Lucide
+
+---
+
+## 📦 NPM Packages Used
+
+- `next`
+- `react`
+- `tailwindcss`
+- `@heroui/react`
+- `better-auth`
+- `swiper`
+- `react-icons`
+- `react-toastify`
+
+---
+
+## ⚙️ Setup Instructions
 
 ```bash
+# Clone the repository
+git clone https://github.com/anaitullah31/lending-library
+
+# Navigate into project
+cd lending-library
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

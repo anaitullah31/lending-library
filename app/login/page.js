@@ -4,7 +4,7 @@ import Image from "next/image";
 import { IoEyeOutline } from "react-icons/io5";
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import SocialLoginButton from "../components/SocialLoginButton";
 import { toast } from "react-toastify";
 
@@ -28,10 +28,9 @@ export default function LoginPage() {
       });
       return;
     }
-    if (data) {
-      router.refresh();
-      router.push("/");
-    }
+
+    router.refresh();
+    redirect("/");
   };
 
   return (

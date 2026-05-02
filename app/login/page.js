@@ -29,8 +29,7 @@ export default function LoginPage() {
       return;
     }
 
-    router.refresh();
-    redirect("/");
+    window.location.href = "/";
   };
 
   return (

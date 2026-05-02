@@ -28,8 +28,8 @@ export default function LoginPage() {
       });
       return;
     }
-
-    window.location.href = "/";
+    router.push("/");
+    router.refresh();
   };
 
   return (

@@ -1,57 +1,59 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { FaApple, FaFacebookF, FaGoogle, FaXTwitter } from "react-icons/fa6";
 import { IoEyeOutline } from "react-icons/io5";
 import { authClient } from "../../lib/auth-client";
-import SocialButton from "../components/SocialButton";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import SocialLoginButton from "../components/SocialLoginButton";
 import { toast } from "react-toastify";
 
 export default function RegisterPage() {
+  const router = useRouter();
+
   const handleForm = async (e) => {
     e.preventDefault();
+
     const name = e.target.name.value;
     const image = e.target.photo.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log(name, photo, email, password);
+
     const { data, error } = await authClient.signUp.email({
       name,
       email,
       password,
       image,
-      // callbackURL: "/login",
     });
-    console.log(data, error);
+
     if (!data) {
-      toast.error(` Please try again! ${error.message}`, {
+      toast.error(`Please try again! ${error?.message}`, {
         position: "top-center",
       });
+      return;
     }
-    if (data) {
-      redirect("/login");
-    }
+
+    router.push("/login");
   };
 
   return (
-    <main className="flex items-center justify-center p-8">
-      <section className="w-full max-w-7xl  rounded-2xl bg-[#ffffff]  flex overflow-hidden">
-        {/* Left illustration */}
-        <div className="hidden lg:flex w-1/2 items-center justify-center p-10">
+    <main className="min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <section className="w-full max-w-7xl rounded-2xl bg-white flex overflow-hidden">
+        {/* Left Illustration */}
+        <div className="hidden lg:flex w-1/2 items-center justify-center p-8 xl:p-10">
           <Image
             src="/login-illustration.png"
-            alt="Login illustration"
+            alt="Register illustration"
             width={520}
             height={520}
-            className="object-contain"
+            priority
+            className="w-full max-w-md xl:max-w-lg object-contain"
           />
         </div>
 
-        {/* Right card */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
-          <div className="w-full max-w-md min-h-170 bg-white rounded-2xl shadow-md p-10">
+        {/* Right Card */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          <div className="w-full max-w-md bg-white rounded-2xl shadow-md px-5 sm:px-8 lg:px-10 py-8 sm:py-10 lg:py-12">
             {/* Logo */}
             <div className="mb-6">
               <div className="h-10 w-10 rounded-full bg-black relative overflow-hidden">
@@ -60,31 +62,28 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            <h1 className="text-4xl font-bold text-black mb-3">Sign up</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-black mb-3">
+              Sign up
+            </h1>
 
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-sm sm:text-base text-gray-500 mb-6">
               Already have an account?{" "}
-              <Link
-                href="/login"
-                className="font-semibold text-black cursor-pointer"
-              >
+              <Link href="/login" className="font-semibold text-black">
                 Sign in
               </Link>
             </p>
 
-            {/* Social buttons */}
             <SocialLoginButton />
 
-            {/* Divider */}
             <div className="flex items-center gap-3 mb-7">
               <div className="h-px flex-1 bg-gray-300" />
-              <span className="text-sm text-gray-500">
+              <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap">
                 or sign up with email
               </span>
               <div className="h-px flex-1 bg-gray-300" />
             </div>
 
-            <form onSubmit={handleForm} className="space-y-6">
+            <form onSubmit={handleForm} className="space-y-5 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
                   Name
@@ -92,19 +91,23 @@ export default function RegisterPage() {
                 <input
                   type="text"
                   name="name"
-                  className="w-full border-b-2 border-black outline-none py-1 text-sm"
+                  required
+                  className="w-full border-b-2 border-black outline-none py-2 text-sm sm:text-base"
                 />
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
                   Image URL
                 </label>
                 <input
                   name="photo"
-                  type="text"
-                  className="w-full border-b-2 border-black outline-none py-1 text-sm"
+                  type="url"
+                  placeholder="https://example.com/photo.jpg"
+                  className="w-full border-b-2 border-black outline-none py-2 text-sm sm:text-base"
                 />
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
                   Email
@@ -112,7 +115,8 @@ export default function RegisterPage() {
                 <input
                   type="email"
                   name="email"
-                  className="w-full border-b-2 border-black outline-none py-1 text-sm"
+                  required
+                  className="w-full border-b-2 border-black outline-none py-2 text-sm sm:text-base"
                 />
               </div>
 
@@ -120,30 +124,32 @@ export default function RegisterPage() {
                 <label className="block text-sm font-medium text-black mb-2">
                   Password
                 </label>
+
                 <div className="relative">
                   <input
                     type="password"
                     name="password"
-                    className="w-full border-b-2 border-black outline-none py-1 pr-8 text-sm"
+                    required
+                    className="w-full border-b-2 border-black outline-none py-2 pr-8 text-sm sm:text-base"
                   />
                   <IoEyeOutline className="absolute right-0 top-1/2 -translate-y-1/2 text-xl" />
                 </div>
               </div>
 
-              <div className="flex items-center justify-between text-sm">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-center sm:justify-between text-sm">
                 <label className="flex items-center gap-2 text-black">
                   <input type="checkbox" className="h-4 w-4 accent-black" />
                   Remember me
                 </label>
 
-                <button type="button" className="text-gray-500">
+                <button type="button" className="text-gray-500 text-left">
                   Forgot?
                 </button>
               </div>
 
               <button
                 type="submit"
-                className="w-full cursor-pointer bg-black text-white rounded-xl py-4 font-medium shadow-md hover:bg-gray-900 transition"
+                className="w-full cursor-pointer bg-black text-white rounded-xl py-3 sm:py-4 text-sm sm:text-base font-medium shadow-md hover:bg-gray-900 transition"
               >
                 Sign Up
               </button>
